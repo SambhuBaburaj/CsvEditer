@@ -1,0 +1,9 @@
+.background{
+
+    background-image: url('../../assets/Leftside.png'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+    background-size: cover; /* Adjusts the size of the background image to cover the entire div */
+    background-position: center; /* Centers the background image within the div */
+    /* You can add more background properties like background-repeat, background-color, etc. as needed */
+ 
+
+}
