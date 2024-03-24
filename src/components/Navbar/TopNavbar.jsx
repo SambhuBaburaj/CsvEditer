@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { openSidebar } from "../../Redux/Features/NavbarSlice";
 import { motion, useAnimationControls } from "framer-motion";
-
+import  vector  from "../../assets/Vector.png"
 import { useLocation, useNavigate } from "react-router-dom";
 
 import "../../assets/style/navbar.css";
@@ -117,7 +117,7 @@ function NavBar() {
                   <div className="flex justify-between gap-5 items-center">
                     <img
                       className="w-5 h-6"
-                      src="/images/Vector.png"
+                      src={vector}
                       alt="img"
                     />
                     <img
