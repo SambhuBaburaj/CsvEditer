@@ -62,18 +62,28 @@ export default function UploadPage() {
 
     setCsvData(newData);
   };
-useEffect(()=>
-{  try{
-  const credentialResponse = localStorage.getItem("Userdata").toString();
-      
-  const credentials = jwtDecode(credentialResponse);
-}catch(err)
-{
-navigate('/login')
-}
-   
 
-},[])
+
+const removeTag=(key,valkey)=>
+{
+  console.log(key,valkey);
+  const newData = { ...csvData };
+  newData.data[key].selectedtags.splice(valkey, 1);
+  setCsvData(newData);
+
+}
+
+
+  useEffect(() => {
+    try {
+      const credentialResponse = localStorage.getItem("Userdata").toString();
+
+      const credentials = jwtDecode(credentialResponse);
+    } catch (err) {
+      navigate("/login");
+    }
+  }, []);
+
 
 
 
@@ -200,13 +210,14 @@ navigate('/login')
                                   </select>
                                 </td>
                                 <td class="border-t-0 px-6 align-center w-96  border-l-0 border-r-0 text-xs whitespace-nowrap p-4 grid grid-cols-3 gap-2">
-                                  {data?.selectedtags?.map((data) => {
+                                  {data?.selectedtags?.map((val,valkey) => {
                                     return (
                                       <div class="flex items-center justify-between bg-gray-200 px-3 py-1 rounded-full">
                                         <span class="text-sm text-gray-800">
-                                          {data}
+                                          {val}
                                         </span>
-                                        <button
+                                        <button value={val}
+                                        onClick={()=>removeTag(key,valkey)}
                                           type="button"
                                           class="text-gray-600 hover:text-red-600 focus:outline-none"
                                         >

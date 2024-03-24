@@ -5,7 +5,6 @@ import Login from "./Pages/Login";
 import LoggedInUser from "./ProtectedRoutes/LoggedInUser";
 import LoggedOutUser from "./ProtectedRoutes/LoggedOutUser";
 import { Navigate } from "react-router-dom";
-import Register from "./Pages/Register";
 import Home from "./Pages/Home";
 import UploadPage from "./Pages/UploadPage";
 import DashBoard from "./Pages/DashBoard";
@@ -27,7 +26,6 @@ function App() {
 
       <Route element={<LoggedInUser />}>
         <Route element={<Login />} path="/login" />
-        <Route element={<Register />} path="/register" />
       </Route>
     </Routes>
   );

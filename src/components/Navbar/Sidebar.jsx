@@ -5,13 +5,8 @@ import { motion, useAnimation } from "framer-motion";
 import { useLocation, useNavigate } from "react-router-dom";
 // import TeleMedicine from "../../Pages/Admin/TeleMedicine";
 import {
-  pharmacyNav,
-  telemedicine,
-  homecare,
-  cleartopNav,
   openSidebar,
 } from "../../Redux/Features/NavbarSlice";
-import logo from "../../assets/images/logo.png";
 
 function SideBar() {
   const dispatch = useDispatch();

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { openSidebar } from "../../Redux/Features/NavbarSlice";
 import { motion, useAnimationControls } from "framer-motion";
-import logo from "../../assets/images/logo.png";
+
 import { useLocation, useNavigate } from "react-router-dom";
 
 import "../../assets/style/navbar.css";
@@ -96,7 +96,7 @@ function NavBar() {
                   SOPHWE
                 </span> */}
                 <div className="max-w-44 ">
-                  <img className="self-center w-28 " src={logo} alt="" />
+                  <p className="text-xl font-bold">Base</p>
                 </div>
               </div>
             </div>

@@ -1,22 +1,22 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
-import Content from '../components/Navbar/Content'
+import Content from "../components/Navbar/Content";
 import { Outlet, useLocation } from "react-router-dom";
-import NavBar from '../components/Navbar/TopNavbar';
-import SideBar from '../components/Navbar/Sidebar';
+import NavBar from "../components/Navbar/TopNavbar";
+import SideBar from "../components/Navbar/Sidebar";
 
 function Home() {
-const navigate=useNavigate()
+  const navigate = useNavigate();
   return (
-<>
-<NavBar />
-<SideBar/>
-<Content>
-<Outlet />
-</Content>
-</>
-  )
+    <>
+      <NavBar />
+      <SideBar />
+      <Content>
+        <Outlet />
+      </Content>
+    </>
+  );
 }
 
-export default Home
+export default Home;
