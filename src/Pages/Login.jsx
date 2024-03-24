@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { LoginUserdata } from "../API/ApiCall";
 import "../assets/style/Login.css";
+import apple from  "../assets/login/apple.png"
 import { GoogleLogin } from "@react-oauth/google";
 const LoginIn = () => {
   const navigate = useNavigate();
@@ -48,7 +49,7 @@ const LoginIn = () => {
                 />
 
                 <button class="flex gap-2 mt-4 sm:mt-0 items-center py-2 px-4 text-sm uppercase rounded bg-white hover:bg-gray-100 text-indigo-500 border border-transparent hover:border-transparent hover:text-gray-700 shadow-md hover:shadow-lg font-medium transition transform hover:-translate-y-0.5">
-                  <img className="w-4 " src="/images/apple.png" alt="" />
+                  <img className="w-4 " src={apple} alt="" />
                   Sign in with Apple
                 </button>
               </div>
